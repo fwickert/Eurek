@@ -1,0 +1,147 @@
+REFERENCE SYSTEM ASSEMBLY [System.Xml];
+
+//J'extrais les données de télémétrie provenant d'IoT Hub avec l'extracteur que j'ai créé dans le fichier cs associé
+@recu =
+    EXTRACT DeviceID string,
+            EventProcessedUtcTime DateTime,
+            OnOff string,
+            DureeUtilisation string
+    FROM "/LampadairesData/EurekTelemetrie.csv"
+         USING Extractors.Csv();
+//USING Extractors.Csv(encoding: Encoding.[ASCII]);
+
+
+//J'extrais les données de référence de mes lampadaires avec l'extracteur JSON dont j'ai importé l'assembli
+
+@tableau =
+    EXTRACT DeviceID string, 
+            OnOff string,
+            EventProcessedUtcTime DateTime,
+            DureeUtilisation string,
+addressDomain string, 
+addressName string,
+addressNature string,
+addressNum string,
+district string,
+lampFamily string,
+lampFlow string,
+lampLib string,
+lampLife string,
+lampLifeUnit string,
+lampPower string,
+lampVolt string,
+material string,
+sector string,
+supportHeight string,
+supportLife string,
+supportLifeUnit string,
+technicalRegion string,
+latitude string,
+longitude string          
+
+    FROM "/LampadairesData/EurekDonneesRefecences.csv"
+ USING Extractors.Csv();
+
+
+
+@result = (SELECT r.DeviceID AS DeviceID,
+       r.OnOff,
+       r.EventProcessedUtcTime,
+       dureeutilisatio.calculdureeutilisation(t.DureeUtilisation,  r.EventProcessedUtcTime , t.EventProcessedUtcTime ) AS DureeUtilisation,
+       t.addressDomain, 
+t.addressName ,
+addressNature ,
+addressNum ,
+district ,
+lampFamily ,
+lampFlow ,
+lampLib ,
+lampLife ,
+lampLifeUnit ,
+lampPower ,
+lampVolt ,
+material ,
+sector ,
+supportHeight ,
+supportLife ,
+supportLifeUnit ,
+technicalRegion ,
+latitude ,
+longitude 
+
+FROM @recu AS r
+     JOIN
+         @tableau AS t
+     ON r.DeviceID == t.DeviceID
+WHERE
+(r.OnOff == "0" AND t.OnOff == "1" ) OR (r.OnOff == "1" AND t.OnOff == "1" ) )
+
+UNION
+
+(SELECT r.DeviceID AS DeviceID,
+       r.OnOff,
+       r.EventProcessedUtcTime,
+       t.DureeUtilisation AS DureeUtilisation,
+       t.addressDomain, 
+t.addressName ,
+addressNature ,
+addressNum ,
+district ,
+lampFamily ,
+lampFlow ,
+lampLib ,
+lampLife ,
+lampLifeUnit ,
+lampPower ,
+lampVolt ,
+material ,
+sector ,
+supportHeight ,
+supportLife ,
+supportLifeUnit ,
+technicalRegion ,
+latitude ,
+longitude 
+  
+FROM @recu AS r
+     JOIN
+         @tableau AS t
+     ON r.DeviceID == t.DeviceID
+WHERE
+!((r.OnOff == "0" AND t.OnOff == "1" ) OR (r.OnOff == "1" AND t.OnOff == "1" )))
+
+UNION 
+
+(SELECT t.DeviceID AS DeviceID,
+        t.OnOff,
+        t.EventProcessedUtcTime,
+        t.DureeUtilisation AS DureeUtilisation,
+addressDomain , 
+addressName ,
+addressNature ,
+addressNum ,
+district ,
+lampFamily ,
+lampFlow ,
+lampLib ,
+lampLife ,
+lampLifeUnit ,
+lampPower ,
+lampVolt ,
+material ,
+sector ,
+supportHeight ,
+supportLife ,
+supportLifeUnit ,
+technicalRegion ,
+latitude ,
+longitude 
+ FROM @tableau AS t LEFT JOIN @recu AS r ON t.DeviceID == r.DeviceID WHERE r.DeviceID IS NULL
+);
+    
+    
+       
+//Mise à jour du compteur dans le fichier de référence de nos lampadaires 
+OUTPUT @result   
+    TO "/LampadairesData/EurekDonneesRefecences.csv"
+USING Outputters.Csv();
