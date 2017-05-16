@@ -4,10 +4,9 @@ using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
 
-
 public static void Run(string myEventHubMessage, TraceWriter log)
 {
-    //deserialize string to DeviceMessage
+    //deserialize string to DeviceMessage class
     DeviceMessage deviceMsg = JsonConvert.DeserializeObject<DeviceMessage>(myEventHubMessage);
 
     //Check if for this deviceID, attributes was different, if so, insert new doc. else nothing
