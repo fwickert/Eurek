@@ -1,0 +1,14 @@
+﻿{
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "myEventHubMessage",
+      "direction": "in",
+      "path": "eurekiothub",
+      "connection": "eurekiothub",
+      "consumerGroup": "function",
+      "cardinality": "many"
+    }
+  ],
+  "disabled": false
+}

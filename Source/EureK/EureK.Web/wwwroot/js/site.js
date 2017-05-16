@@ -53,7 +53,7 @@ function SendMessage(deviceID, onOff, lux, angle)
     var msg = JSON.stringify({ DeviceID: deviceID, OnOff: onOff, Lux: lux, Angle: angle });
    
     $.ajax({
-        url: "https://<Your function>.azurewebsites.net/api/<Your Function Name>?code=<Your Function Code>",
+        url: "https://<Your function>.azurewebsites.net/api/DeviceSimulatorAPI?code=<Your Function Code>",
         type:"POST",
         contentType: "application/json",
         dataType:"json",

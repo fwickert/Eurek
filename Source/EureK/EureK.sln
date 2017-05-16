@@ -9,6 +9,27 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EureK.Web", "EureK.Web\Eure
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDeviceSimulation", "TestDeviceSimulation\TestDeviceSimulation.csproj", "{982DDFF9-A7A6-46C6-9C54-1C634740BAFA}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "eurek-function", "eurek-function\", "{686FD09C-20E3-46C3-949B-6DE98378411E}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_31403"
+		Debug.AspNetCompiler.PhysicalPath = "eurek-function\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_31403\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_31403"
+		Release.AspNetCompiler.PhysicalPath = "eurek-function\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_31403\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "31403"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +48,10 @@ Global
 		{982DDFF9-A7A6-46C6-9C54-1C634740BAFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{982DDFF9-A7A6-46C6-9C54-1C634740BAFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{982DDFF9-A7A6-46C6-9C54-1C634740BAFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{686FD09C-20E3-46C3-949B-6DE98378411E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{686FD09C-20E3-46C3-949B-6DE98378411E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{686FD09C-20E3-46C3-949B-6DE98378411E}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{686FD09C-20E3-46C3-949B-6DE98378411E}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

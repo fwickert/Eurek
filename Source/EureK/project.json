@@ -1,0 +1,11 @@
+{
+  "frameworks": {
+    "net46": {
+      "dependencies": {
+        "Newtonsoft.Json": "10.0.0.2",
+        "Microsoft.Azure.Devices.Client": "1.2.6",
+        "Microsoft.Azure.Devices": "1.2.4"
+      }
+    }
+  }
+}
