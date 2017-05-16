@@ -5,10 +5,10 @@ using Microsoft.Azure.Devices;
 using System.Text;
 using Newtonsoft.Json;
 
-private static string connectionString = "HostName=EurekIoTHub.azure-devices.net;SharedAccessKeyName=registryReadWrite;SharedAccessKey=GtBWJiQ0+yZfzEvA0UBrPvNBqedzqDgIQxzOjP0aPGs=";
+private static string connectionString = "HostName=<Your IoTHub>.azure-devices.net;SharedAccessKeyName=registryReadWrite;SharedAccessKey=<Your SAK>";
 private static RegistryManager registryManager;
 static DeviceClient deviceClient;
-static string iotHubUri = "EurekIoTHub.azure-devices.net";
+static string iotHubUri = "<Your IoTHub>.azure-devices.net";
 
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)

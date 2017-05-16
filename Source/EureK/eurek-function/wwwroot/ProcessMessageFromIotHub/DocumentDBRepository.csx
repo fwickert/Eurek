@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 public static class DocumentDBRepository<T> where T : class
 {
     #region Key
-    private static string enpoint = "https://eurek.documents.azure.com:443/";
-    private static string authKey = "etyH1vqr1KC6tfc8v8ds4VGZNhvSvidonDwh7OqYq2cr2o7GoGgjYAb1jSCG4NigxxfdtDAbxGHv36ydUtu9tg==";
+    private static string enpoint = "https://<Your CosmosDB Name>.documents.azure.com:443/";
+    private static string authKey = "<Your CosmosDB Key>";
     #endregion
 
     private static DocumentClient _client = new DocumentClient(new Uri(enpoint), authKey);
