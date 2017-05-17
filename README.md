@@ -37,7 +37,7 @@ Nous allons utiliser **Microsoft Azure** pour mettre en oeuvre ces 3 parties. EN
 
 ## Azure App Service : Function App
 - Presentation : Fichier : https://github.com/fwickert/Eurek/blob/master/Presentation/Tour%20de%20France%20Partie1.pptx (Slide 29-31)
-- Lab : Document en cours d'écriture pour expliquer comment créer une Function App et y publier le code.
+- Lab : https://github.com/fwickert/Eurek/blob/master/Lab/Lab%201%20-%20Partie%202%20-%20FunctionApp.docx
 - Projet "eurek-function/wwwroot" : Source de la solution https://github.com/fwickert/Eurek/blob/master/Source/EureK/EureK.sln
 
 ## Azure App Service : Web App
