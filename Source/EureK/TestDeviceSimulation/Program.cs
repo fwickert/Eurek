@@ -63,8 +63,8 @@ namespace TestDeviceSimulation
         //Send Fake data with 20 devices
         private static async void SendBulkMsgDeviceToCloudAsync()
         {
-            //List OF 20 Fake devices
-            List<string> Devices = new List<string> { "100152", "100159", "100172", "100175", "100182", "100263", "100398", "100400", "100405", "100409", "100449", "100458", "100476", "100500", "100522", "100529", "100536", "100545", "100614", "100655" };
+            //List OF 5 Fake devices
+            List<string> Devices = new List<string> { "100152", "100159", "100172", "100175", "100182"};
 
 
             while (true)
