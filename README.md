@@ -35,6 +35,11 @@ Nous allons utiliser **Microsoft Azure** pour mettre en oeuvre ces 3 parties. EN
 - Presentation : Fichier : https://github.com/fwickert/Eurek/blob/master/Presentation/Tour%20de%20France%20Partie1.pptx (Slide 25-28)
 - Lab : https://github.com/fwickert/Eurek/blob/master/Lab/Lab%201%20-%20Partie%201%20-%20IOTHUB.docx
 
+## Azure App Service : Function App
+- Presentation : Fichier : https://github.com/fwickert/Eurek/blob/master/Presentation/Tour%20de%20France%20Partie1.pptx (Slide 29-31)
+- Lab : Document en cours d'écriture pour expliquer comment créer une Function App et y publier le code.
+- Projet "eurek-function/wwwroot" : Source de la solution https://github.com/fwickert/Eurek/blob/master/Source/EureK/EureK.sln
+
 ## Azure App Service : Web App
 - Presentation : Fichier : https://github.com/fwickert/Eurek/blob/master/Presentation/Tour%20de%20France%20Partie1.pptx (Slide 14-24)
 - Lab : Document en cours d'écriture pour expliquer pourquoi ce site et comment le publier dans un Azure App Service.
@@ -49,7 +54,3 @@ Attention : Ces slides vont changer dans quelques jours (Depuis l'annonce de Cos
 - Lab : Document en cours d'écriture pour expliquer comment créer des devices "simulés" pour envoyer des informations
 - Projet "TestDeviceSimulation" : Source de la solution https://github.com/fwickert/Eurek/blob/master/Source/EureK/EureK.sln
 
-## Azure App Service : Function App
-- Presentation : Fichier : https://github.com/fwickert/Eurek/blob/master/Presentation/Tour%20de%20France%20Partie1.pptx (Slide 29-31)
-- Lab : Document en cours d'écriture pour expliquer comment créer une Function App et y publier le code.
-- Projet "eurek-function/wwwroot" : Source de la solution https://github.com/fwickert/Eurek/blob/master/Source/EureK/EureK.sln
