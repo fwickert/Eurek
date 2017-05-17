@@ -33,7 +33,7 @@ Nous allons utiliser **Microsoft Azure** pour mettre en oeuvre ces 3 parties. EN
 
 ## Azure Iot Hub
 - Presentation : Fichier : https://github.com/fwickert/Eurek/blob/master/Presentation/Tour%20de%20France%20Partie1.pptx (Slide 25-28)
-- Lab : Document en cours d'écriture pour expliquer comment créer un IotHub
+- Lab : https://github.com/fwickert/Eurek/blob/master/Lab/Lab%201%20-%20Partie%201%20-%20IOTHUB.docx
 
 ## Azure App Service : Web App
 - Presentation : Fichier : https://github.com/fwickert/Eurek/blob/master/Presentation/Tour%20de%20France%20Partie1.pptx (Slide 14-24)
