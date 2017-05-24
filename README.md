@@ -48,9 +48,9 @@ Nous allons utiliser **Microsoft Azure** pour mettre en oeuvre ces 3 parties. EN
 ## Azure CosmosDB
 - Presentation : Fichier : https://github.com/fwickert/Eurek/blob/master/Presentation/Tour%20de%20France%20Partie1.pptx (Slide 32-40)
 Attention : Ces slides vont changer dans quelques jours (Depuis l'annonce de CosmosDB à la place de DocumentDB)
-- Lab : Document en cours d'écriture pour expliquer comment créer une CosmosDB (Pour gérer l'historique des états)
+- Lab : https://github.com/fwickert/Eurek/blob/master/Lab/Lab%201%20-%20Partie%204%20-%20CosmosDB.docx
 
 ## Console App : Simulateur de Devices
-- Lab : Document en cours d'écriture pour expliquer comment créer des devices "simulés" pour envoyer des informations
+- Lab : Voir la fin du lab CosmosDB
 - Projet "TestDeviceSimulation" : Source de la solution https://github.com/fwickert/Eurek/blob/master/Source/EureK/EureK.sln
 
